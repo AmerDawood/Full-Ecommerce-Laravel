@@ -30,6 +30,9 @@ class CategoryController extends Controller
                 // 'data' =>'no dada'
             ], 200);
         }
+
+
+
     }
 
     /**

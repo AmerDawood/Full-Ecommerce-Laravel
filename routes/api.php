@@ -35,4 +35,18 @@ Route::prefix('v1')->group(function() {
     Route::apiResource('reviews', ReviewController::class);
 
 
+
+
+    Route::fallback(function(){
+        return response()->json([
+            'status_code' => '0',
+            'status_message' => 'Invalid Url.',
+            'success' => 'false',
+        ], 404);
+    })->name('api.fallback.404');
+
+
+
+
+
 });
